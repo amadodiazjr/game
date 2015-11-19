@@ -4,6 +4,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
   <servlet>
+    <display-name>PushServlet</display-name>
+    <servlet-name>PushServlet</servlet-name>
+    <servlet-class>com.hackathon.PushServlet</servlet-class>
+  </servlet>
+
+  <servlet>
     <display-name>HelloWorldServlet</display-name>
     <servlet-name>HelloWorldServlet</servlet-name>
     <servlet-class>com.hackathon.HelloWorldServlet</servlet-class>
@@ -11,7 +17,12 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
 
   <servlet-mapping>
     <servlet-name>HelloWorldServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/game</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>PushServlet</servlet-name>
+    <url-pattern>/push</url-pattern>
   </servlet-mapping>
 
 </web-app>
