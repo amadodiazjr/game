@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class PushServlet extends HttpServlet {
  
 	private static final long serialVersionUID = 1L;
-
+	
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
      
@@ -23,16 +23,16 @@ public class PushServlet extends HttpServlet {
  
         PrintWriter writer = response.getWriter();
  
-        for(int i=0; i<10; i++) {
+//        for(int i=0; i<10; i++) {
  
             writer.write("data: "+ System.currentTimeMillis() +"\n\n");
  
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
         writer.close();
     }
 }
