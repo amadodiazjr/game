@@ -1,5 +1,5 @@
 // establish the communication channel over a websocket
-var ws = new WebSocket("ws://127.0.0.1:8080/game/stocks");
+var ws = new WebSocket("ws://127.0.0.1:8080/stocks");
  
 // called when socket connection established
 ws.onopen = function() {
