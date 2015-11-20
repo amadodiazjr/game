@@ -7,7 +7,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-
+<!-- 
   <servlet>
     <display-name>PushServlet</display-name>
     <servlet-name>PushServlet</servlet-name>
@@ -29,5 +29,14 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
     <servlet-name>PushServlet</servlet-name>
     <url-pattern>/push</url-pattern>
   </servlet-mapping>
+-->
+  <servlet>
+    <servlet-name>StockServiceServlet</servlet-name>
+    <servlet-class>com.hackathon.StockServiceServlet</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+    <servlet-name>StockServiceServlet</servlet-name>
+    <url-pattern>/game/stocks</url-pattern>
+  </servlet-mapping>
 </web-app>
