@@ -14,6 +14,9 @@ public class HelloWorldServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)  
             throws ServletException, IOException {
+    	
+    	final String message = req.getParameter("message");
+    	StockService.MESSAGES.add(message);
         resp.getOutputStream().write("Hello World.".getBytes());
     }
 }

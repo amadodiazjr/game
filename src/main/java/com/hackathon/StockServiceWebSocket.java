@@ -38,7 +38,7 @@ public class StockServiceWebSocket {
             case "start":
                 send("Stock service started!");
                 executor.scheduleAtFixedRate(() -> 
-                    send(StockService.getStockInfo()), 0, 1, TimeUnit.MILLISECONDS);
+                    send(null != StockService.MESSAGES.peek() ? StockService.MESSAGES.remove() : ""), 0, 1, TimeUnit.MILLISECONDS);
                 break;
             case "stop":
                 this.stop();

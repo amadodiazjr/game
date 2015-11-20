@@ -3,11 +3,14 @@ package com.hackathon;
 import java.text.MessageFormat;
 import java.time.LocalTime;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
  
 // A sample class that generates fake stock information.
 public class StockService {
- 
+	public static Queue<String> MESSAGES = new LinkedList<>();
+	
     // Random stock value generators. One for each sample stock
     private static Random rnd = new Random();
     private static Iterator<Double> goog = rnd.doubles(525, 527).iterator();
